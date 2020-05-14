@@ -1,9 +1,6 @@
-<!-- 
-This is my personal Get Started template. To use this, just change some text around and have fun!
--->
 <div align="center">
-<h1 align="center">My Project</h1>
-<p align="center">My Project Description</p>
+<h1 align="center">Image Generator</h1>
+<p align="center">Generate a Placeholder Image</p>
 </div>
 
 ---
