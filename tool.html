@@ -6,30 +6,23 @@
       #imageCreator {
         display: none;
       }
-
       * {
         margin: 0;
-      }
-
-      iframe {
-        position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;
       }
     </style>
   </head>
   <body>
     <canvas id="imageCreator"></canvas>
-    <iframe></iframe>
+    <img id="image">
     <script src="imagecreator.js">
       var url_string = window.location.href;
       var url = new URL(url_string);
-
       var imageHeight = url.searchParams.get("height") || 400;
       var imageWidth = url.searchParams.get("width") || 600;
       var imageBackground = url.searchParams.get("bg") || '#000000';
       var textColor = url.searchParams.get("color") || '#ffffff';
       var text = url.searchParams.get("text") || imageWidth + 'x' + imageWidth;
-       document.getElementsByTagName('iframe').src = generateImage(imageHeight, imageWidth, imageBackground, textColor, text);
-      
+      document.getElementById("image").src = generateImage(imageHeight, imageWidth, imageBackground, textColor, text);
     </script>
   </body>
 </html>
