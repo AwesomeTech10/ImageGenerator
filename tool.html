@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Placeholder Image Creator</title>
+    <script src="imagecreator.js"></script>
     <style>
       #imageCreator {
         display: none;
@@ -13,8 +14,8 @@
   </head>
   <body>
     <canvas id="imageCreator"></canvas>
-    <img id="image">
-    <script src="imagecreator.js">
+    <img id="image" src="">
+    <script>
       var url_string = window.location.href;
       var url = new URL(url_string);
       var imageHeight = url.searchParams.get("height") || 400;
@@ -22,7 +23,8 @@
       var imageBackground = url.searchParams.get("bg") || '#000000';
       var textColor = url.searchParams.get("color") || '#ffffff';
       var text = url.searchParams.get("text") || imageWidth + 'x' + imageWidth;
-      document.getElementById("image").src = generateImage(imageHeight, imageWidth, imageBackground, textColor, text);
+      var img = generateImage(imageHeight, imageWidth, imageBackground, textColor, text);
+      document.getElementById("image").src = img;
     </script>
   </body>
 </html>
