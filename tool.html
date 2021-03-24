@@ -22,7 +22,7 @@
       var imageWidth = url.searchParams.get("width") || 600;
       var imageBackground = url.searchParams.get("bg") || '#000000';
       var textColor = url.searchParams.get("color") || '#ffffff';
-      var text = url.searchParams.get("text") || imageWidth + 'x' + imageWidth;
+      var text = url.searchParams.get("text") || imageHeight + 'x' + imageWidth;
       var img = generateImage(imageHeight, imageWidth, imageBackground, textColor, text);
       document.getElementById("image").src = img;
     </script>
